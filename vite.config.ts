@@ -8,5 +8,5 @@ export default defineConfig({
     port: 3000,
     host: true
   },
-  base: '/water-app/'
+  base: process.env.NODE_ENV === 'production' ? '/water-app/' : '/'
 })
